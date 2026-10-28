@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Segoe UI", sans-serif;
+}
+
+/* Normal: fondo con bg.jpg */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    min-height: 100vh;
+    background: url("../img/img.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+/* Caja del login: 420px */
+.wrapper {
+    width: 420px;
+    max-width: 90%;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px 40px;
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.wrapper:hover {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
+    transform: translateY(-4px);
+}
+
+.wrapper h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Inputs: 100% de ancho y 45px de alto */
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    margin: 25px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 45px 0 20px;
+    transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -10px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.wrapper .btn:hover {
+    background: #ddd;
+    transform: scale(1.03);
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/* Flexbox: tres cajas en fila */
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes .caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    font-size: 30px;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease;
+}
+
+.redes .caja:hover {
+    background: #fff;
+    color: #333;
+    transform: translateY(-5px);
+}
+
+/* MEDIA QUERY 1: tablet (hasta 800px) -> otra imagen de fondo */
+@media (max-width: 800px) {
+    body {
+        background: url("../img/img1.jpg") no-repeat center center;
+        background-size: cover;
+    }
+}
+
+/* MEDIA QUERY 2: movil (hasta 450px) -> fondo #333 */
+@media (max-width: 450px) {
+    body {
+        background: #333;
+    }
+
+    .wrapper {
+        padding: 25px 20px;
+    }
+
+    .redes .caja {
+        width: 60px;
+        height: 60px;
+    }
+}
